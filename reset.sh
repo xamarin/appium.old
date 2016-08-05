@@ -228,14 +228,14 @@ reset_ios() {
     run_cmd cp -r submodules/libimobiledevice-macosx build/libimobiledevice-macosx
     echo "* Cloning/updating deviceconsole"
     run_cmd git submodule update --init submodules/deviceconsole
-    echo "* Building deviceconsole"
-    run_cmd pushd submodules/deviceconsole
-    run_cmd make
-    run_cmd popd
-    echo "* Copying deviceconsole to build"
-    run_cmd rm -rf build/deviceconsole
-    run_cmd mkdir -p build/deviceconsole
-    run_cmd cp -r submodules/deviceconsole/deviceconsole build/deviceconsole/deviceconsole
+    echo "* NOT Building deviceconsole"
+#    run_cmd pushd submodules/deviceconsole
+#    run_cmd make
+#    run_cmd popd
+#    echo "* Copying deviceconsole to build"
+#    run_cmd rm -rf build/deviceconsole
+#    run_cmd mkdir -p build/deviceconsole
+#    run_cmd cp -r submodules/deviceconsole/deviceconsole build/deviceconsole/deviceconsole
 }
 
 get_apidemos() {
